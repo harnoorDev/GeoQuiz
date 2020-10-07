@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/back_australia"
+        android:backgroundTintMode="src_atop"
+        tools:layout_editor_absoluteX="5dp"
+        tools:layout_editor_absoluteY="0dp">
+
+
+        <Button
+            android:id="@+id/true_button"
+            android:layout_width="95dp"
+            android:layout_height="45dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="19dp"
+            android:text="@string/true_button"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/imageButtonRight"
+            app:layout_constraintEnd_toStartOf="@+id/false_button"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/question_text_view"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <Button
+            android:id="@+id/false_button"
+            android:layout_width="98dp"
+            android:layout_height="46dp"
+            android:layout_marginEnd="12dp"
+            android:text="@string/false_button"
+            android:textStyle="bold"
+            app:layout_constraintBaseline_toBaselineOf="@+id/true_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/true_button" />
+
+        <TextView
+            android:id="@+id/question_text_view"
+            android:layout_width="685dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="63dp"
+            android:layout_marginEnd="3dp"
+            android:layout_marginBottom="104dp"
+            android:gravity="center"
+            android:padding="24dp"
+            android:text="@string/question_australia"
+            android:textColor="@android:color/background_light"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/cheat_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.427"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/imageButtonRight"
+            android:layout_width="59dp"
+            android:layout_height="37dp"
+            android:layout_marginEnd="309dp"
+            android:contentDescription="@string/right"
+            app:layout_constraintBottom_toBottomOf="@+id/imageButtonLeft"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageButtonLeft"
+            app:layout_constraintTop_toTopOf="@+id/imageButtonLeft"
+            app:srcCompat="@drawable/arrow_right" />
+
+        <ImageButton
+            android:id="@+id/imageButtonLeft"
+            android:layout_width="64dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="294dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="50dp"
+            android:contentDescription="@string/left"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imageButtonRight"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/question_text_view"
+            app:srcCompat="@drawable/arrow_left" />
+
+        <Button
+            android:id="@+id/cheat_button"
+            android:layout_width="89dp"
+            android:layout_height="47dp"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="13dp"
+            android:background="#FF1400"
+            android:text="@string/cheat_button"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/imageButtonLeft"
+            app:layout_constraintStart_toEndOf="@+id/imageButtonLeft"
+            app:layout_constraintTop_toBottomOf="@+id/question_text_view" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
